@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<title>Sad Pacman</title>
+<head>
+
+
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="UserInteraction.js"></script>
+    <script src="Helpers.js"></script>
+    <script src="Game.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <script type="text/javascript" charset="UTF-8">
+        // default settings for game:
+        // 0- up
+        // 1- right
+        // 2- down
+        // 3- left
+        // 4- num bolls
+        // 5- color of 5 points ball
+        // 6- color of 15 points ball
+        // 7- color of 25 points ball
+        // 8- time to play
+        // 9- number monsters
+        var gameSettings=new Array();
+        gameSettings[0] = 'ArrowUp';
+        gameSettings[1] = 'ArrowRight';
+        gameSettings[2] = 'ArrowDown';
+        gameSettings[3] = 'ArrowLeft';
+        gameSettings[4] = 50;
+        gameSettings[5] = "#4983FF";
+        gameSettings[6] = "#BA7A1A";
+        gameSettings[7] = "#5EBC00";
+        gameSettings[8] = 60;
+        gameSettings[9] = 2;
+        
+
+        //initialization sequence
+        var testUser = {password:'a',firstname:'a',lastname:'a'};
+        var usersDictionary={'a':testUser};
+        var loggedName = "User";
+        $( document ).ready(function() {
+            hideAlllExcept('welcome');
+            var logged = false;
+            game.placeStartScreen();
+            $('#html5colorpicker5').on('input', function() {
+                $(this).parent().css({
+                background: $(this).val()
+                });
+            });
+            $('#html5colorpicker15').on('input', function() {
+                $(this).parent().css({
+                background: $(this).val()
+                });
+            });
+            $('#html5colorpicker25').on('input', function() {
+                $(this).parent().css({
+                background: $(this).val()
+                });
+            });
+        });
+    </script>
+    <div id="menu">
+        <center id="menuItems">
+                <i class="fa fa-info fa-4x" style="color:#000000;" id="aboutCaller"></i>
+                <i class="fa fa-home fa-4x" style="color:#000000;" onclick="hideAlllExcept('welcome')"></i> 
+        </center>
+    </div>
+    <!----------------------------------------------------------------------WELCOME PAGE------------------------------------------------------------------------------>
+    <div id="welcome" class="screens">
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <img src="Welcome.png" class="welcomeIMG" alt="Welcome" style="width:100%;height:50%;float:auto;">
+    </br>
+    </br>
+    </br>
+    
+    <ul>
+        <li> <button type="button" id="register_button" class="WelcomeScreenButton" style = "display:flex; justify-content:center;" onclick="hideAlllExcept('register')">Registering Page</button></li>
+        <li> <button type="button" id="login_button" class="WelcomeScreenButton" style = "display:flex; justify-content:center;" onclick="hideAlllExcept('login')">Login Page</button></li>
+        </ul>
+    </div>
+    </div>
+    <!----------------------------------------------------------------------LOGIN PAGE-------------------------------------------------------------------------------->
+    <div id="login" class="screens">
+    </br>
+    </br>
+    </br>
+    <img src="Welcome.png" alt="Welcome" style="width:100%;height:100%;float:middle;"> 
+</br>
+</br>
+</br>
+    <form class="register_form" id="loginForm" method="POST" action="" novalidate="novalidate" > 
+        <fieldset class="userForm">
+            <legend>Login</legend>
+            </br>
+            <input id="login_username" name="username" type="text" placeholder="Username">
+            </p>
+            <p>
+            <input id="login_password" name="password" type="password" placeholder="Password">
+            </p>
+            <p>
+            <input class="submit" type="submit" value="Log In" onclick="updateUser()">
+            </p>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+    </div>
+    <!--------------------------------------------------------------------REGISTER PAGE------------------------------------------------------------------------------->
+    <div id="register" class="screens" >
+        </br>
+        </br>
+        </br>
+        <img src="Welcome.png" alt="Welcome" style="width:100%;height:100%;float:middle;"> 
+        </br>
+        </br>
+        </br>
+        <form class="register_form" id="signupForm" method="POST" action="" novalidate="novalidate" > 
+            <fieldset class="userForm">
+                <legend>Register a new account</legend>
+                <p>
+                <input id="reg_firstname" name="firstname" type="text" placeholder="First Name">
+                </p>
+                <p>
+                <input id="reg_lastname" name="lastname" type="text" placeholder="Last Name">
+                </p>
+                <p>
+                <input id="reg_username" name="username" type="text" placeholder="Username">
+                </p>
+                <p>
+                <input id="reg_email" name="email" type="email" placeholder="email">
+                </p>
+                <p>
+                <input id="reg_date_birth" name="dateBirth" type="date">
+                </p>
+
+                <p>
+                <input id="reg_password" name="password" type="password" placeholder="Password">
+                </p>
+                <p>
+                <input id="reg_confirm_password" name="confirm_password" type="password" placeholder="Confirm Password">
+                </p>
+                <p>
+                <input class="submit" type="submit" value="Submit" onclick="">
+                </p>
+            </fieldset>
+        </form>
+    </div>
+    <!----------------------------------------------------------------------SETTINGS PAGE----------------------------------------------------------------------------->
+    <div id="settings" class="screens">
+        </br>
+        </br>
+        </br>
+        </br>
+            <div style = "margin: auto;width: 30%;">
+                <form id="frm1" class="userForm">
+                    <label for="upMove">Up: </label>
+                    <input type="event" id='upMove' name="up" onkeyup="writeWhatPressed(event, 0)"><br>
+                    </br>
+                    <label for="rightMove">Right: </label>
+                    <input type="event" id='rightMove' name="up" onkeyup="writeWhatPressed(event, 1)"><br>
+                    </br>
+                    <label for="downMove">Down: </label>
+                    <input type="event" id='downMove' name="up" onkeyup="writeWhatPressed(event, 2)"><br>
+                    </br>
+                    <label for="leftMove">Left: </label>
+                    <input type="event" id='leftMove' name="up" onkeyup="writeWhatPressed(event, 3)"><br>
+                    </br>
+                    <label for="slider">Number of balls <span id="ballsNum"></span>:</label><br>
+                    <nobr>50 <input type="range" min="50" max="90" value="50" class="slider" id="slider" onchange="setSetting(4,value)">90</nobr><br>
+                    <label for="html5colorpicker5">Color of 5 point food: </label>
+                    <div class="colorPickerBracket" style="background: #4983FF;">
+                    <input type="color" id="html5colorpicker5" class="colorPicker" onchange="clickColor(0, -1, -1, 5, 'html5colorpicker5')" value="#ff0000"><br>
+                    </div>
+                    <label for="html5colorpicker15">Color of 15 point food: </label>
+                    <div class="colorPickerBracket" style="background: #BA7A1A;">
+                    <input type="color" id="html5colorpicker15" class="colorPicker" onchange="clickColor(0, -1, -1, 5, 'html5colorpicker15')" value="#00ff00"><br>
+                    </div>
+                    <label for="html5colorpicker25">Color of 25 point food: </label>
+                    <div class="colorPickerBracket" style="background: #5EBC00;">
+                    <input type="color" id="html5colorpicker25" class="colorPicker" onchange="clickColor(0, -1, -1, 5, 'html5colorpicker25')" value="#0000ff"><br>
+                    </div>
+                    <nobr>Max time for playing one game: <input type="number" name="timer" min="60" onchange="setSetting(8,value)"><br>
+                    <nobr>Number monsters in the game: <input type="number" name="timer" min="1" max="3" onchange="setSetting(9,value)"></nobr><br>
+                    <ul><input type="button" value="Random" class="submit" onclick="random(event)">
+                    <input type="submit" value="Save changes&Restart" class="submit" onclick="saveAndRestart(event)"></ul>
+                </form>
+                </div>
+                
+            </div>
+
+            <script>
+                //counting the balls chosen!
+                var slider = document.getElementById("slider");
+                var output = document.getElementById("ballsNum");
+                output.innerHTML = slider.value;
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+            </script>
+    </div>
+    <!----------------------------------------------------------------------ABOUT PAGE-------------------------------------------------------------------------------->
+    <div id="about" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Ariel Kamar      315029272<br/>Natan Golubyevsky 324790716</p>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById('about');
+        var btn = document.getElementById('aboutCaller');
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+            window.onkeyup = function(e){
+                if(e.which==27){
+                    modal.style.display = "none";
+                }
+            }
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <!---------------------------------------------------------------------GAME PAGE---------------------------------------------------------------------------------->
+    <div id="game" class="screens">
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div id="game_itself" class="game_itself">
+            <canvas id="score_canvas"></canvas>
+            <br/>
+            <canvas id="game_canvas"></canvas>
+            </div>
+            <script type="text/javascript">
+                var gameRunning = false;
+                var paused = false;
+                var stopped = false;
+                var ScoreBar = new ScoreScreen(document.getElementById('score_canvas'));
+                var mainCanvas = document.getElementById('game_canvas');
+                var game = new GameScreenUpdated(ScoreBar,mainCanvas);
+                game.initializeGame();
+            </script>
+    </div>
+    <div id="hidden" style="display: none;">
+        <img src="start.png" id="start" alt="startingScreen" height="250" width="250">
+        <img src="heal.jpg" id="heal" alt="UpLife" height="250" width="250">
+        <img src="superfood.jpg" id="superFood" alt="50pts" height="100" width="100">
+
+
+    </div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--TODO:
+        -add pause function to the game - done 
+        -rotating and animated pacman - done
+        -countdown timer - done
+        -restart the game - done
+        -refit game design - done (may change)
+        -moving food - 
+    -->
+    
+</script>
+<footer>
+    Internet Programming Enviroments.  
+    Ariel Kamar      315029272 Natan Golubyevsky 324790716</p> 
+</footer>
+</body>
+</html>
